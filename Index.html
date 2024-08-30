@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTROL DE VEHÍCULOS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Style.css">
+    <script src="html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center text-white">CONTROL DE VEHÍCULOS</h1>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#modal-formulario">Agregar datos</button>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#modal-tabla">Ver tabla</button>
+    </div>
+
+    <!-- Modal for form -->
+    <div class="modal fade" id="modal-formulario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar datos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formulario"><div class="form-group mt-3">
+          <label for="placa" class="form-label">Placa:</label>
+          <select class="form-select" id="placa" name="PLACA" required>
+            <option value="" disabled selected>Seleccione una placa</option>
+            <option value="EYX468">EYX468</option>
+            <option value="GUQ638">GUQ638</option>
+            <option value="GUQ888">GUQ888</option>
+            <option value="GUQ894">GUQ894</option>
+            <option value="KSP186">KSP186</option>
+            <option value="LCM097">LCM097</option>
+            <option value="LCM098">LCM098</option>
+            <option value="LCM101">LCM101</option>
+            <option value="LCM102">LCM102</option>
+            <option value="LCN027">LCN027</option>
+            <option value="LCO181">LCO181</option>
+            <option value="LCO186">LCO186</option>
+            <option value="LC0313">LC0313</option>
+            <option value="LC0314">LC0314</option>
+            <option value="UT744">UT744</option>
+            <option value="LIT746">LIT746</option>
+            <option value="TRJ385">TRJ385</option>
+            <option value="TRK556">TRK556</option>
+            <option value="TRK557">TRK557</option>
+            <option value="TRK572">TRK572</option>
+            <option value="TRK585">TRK585</option>
+            <option value="TRK586">TRK586</option>
+            <option value="TRK587">TRK587</option>
+            <option value="TRK597">TRK597</option>
+            <option value="TRK598">TRK598</option>
+            <option value="TRK606">TRK606</option>
+            <option value="TRK609">TRK609</option>
+            <option value="UYW803">UYW803</option>
+            <option value="UYX119">UYX119</option>
+            <option value="UYX126">UYX126</option>
+            <option value="UYX137">UYX137</option>
+            <option value="UYX228">UYX228</option>
+            <option value="UYX236">UYX236</option>
+            <option value="UYX613">UYX613</option>
+            <option value="UYX696">UYX696</option>
+            <option value="UYX804">UYX804</option>
+            <option value="UYX915">UYX915</option>
+            <option value="UYX969">UYX969</option>
+            <option value="UYY015">UYY015</option>
+            <option value="UYY194">UYY194</option>
+            <option value="UYY723">UYY723</option>
+            <option value="UYY726">UYY726</option>
+            <option value="VEP052">VEP052</option>
+            <option value="XMB493">XMB493</option>
+            <option value="XMC296">XMC296</option>
+          </select>
+        </div>
+                <div class="form-group">
+                    <label for="evaluacion" class="form-label">Tipo de Evaluación:</label>
+                    <select class="form-select" id="evaluacion" name="EVALUACIÓN" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option value="MILIMETRAJE">MILIMETRAJE</option>
+                        <option value="EVALUACIÓN ESTÁNDAR">EVALUACIÓN ESTÁNDAR</option>
+                        <option value="CALIDAD CHECK LIST">CALIDAD CHECK LIST</option>
+                    </select>
+                </div>
+<div class="form-group">
+                    <label for="fecha" class="form-label">Fecha y hora:</label>
+                    <input type="datetime-local" class="form-control" id="fecha_hora" name="FECHA Y HORA" required>
+                </div>
+                <div class="form-group">
+                    <label for="novedades" class="form-label">Novedades:</label>
+                    <textarea class="form-control" id="novedades" name="NOVEDAD" rows="3" placeholder="Describa las novedades"></textarea>
+                </div>
+                        
+                        <button type="submit" class="btn btn-primary">Agregar datos</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for table -->
+    <div class="modal fade" id="modal-tabla" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body" id="tabla1">
+                  <h5 class="modal-title mb-5 mt-2 text-center" id="exampleModalLabel">Tabla de datos</h5>
+                    <table class="table" id="tabla">
+                        <thead>
+                            <tr>
+                                <th>Placa</th>
+                                <th>Evaluación</th>
+                                <th>Fecha y hora</th>
+                                <th>Novedades</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-body">
+                        </tbody>
+                    </table>
+                    
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-danger" id="vaciar-tabla">Vaciar tabla</button>
+                  <button class="btn btn-danger" id="btnCrearPdf">Generar Reporte</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="JS.js"></script>
+</body>
+</html>

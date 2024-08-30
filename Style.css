@@ -1,0 +1,100 @@
+body {
+            background-image: url('https://www.graficasolver.es/wp-content/uploads/2017/07/fondo-colores-olver.jpg'); /* Reemplaza con la URL de tu imagen */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .card {
+            border-radius: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            padding-bottom: 20px;
+            background: rgba(255, 255, 255, 0.95); /* Fondo más opaco */
+        }
+
+        .card-header {
+            background-color: #dc3545; /* Rojo */
+            color: #fff;
+            text-align: center;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-top: 20px;
+        }
+
+        .form-label {
+            font-weight: bold;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control,
+        .form-select {
+            width: 80%;
+            max-width: 350px;
+            border: 2px solid #dc3545; /* Rojo */
+            border-radius: 30px;
+            padding: 0.75rem;
+            font-size: 1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #c82333; /* Rojo más oscuro */
+            box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+        }
+
+        .btn-primary {
+            border-radius: 30px;
+            background: linear-gradient(90deg, #dc3545, #c82333); /* Rojo degradado */
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 350px;
+            margin-top: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #c82333, #bd2130); /* Rojo más oscuro */
+            transform: scale(1.05);
+        }
+
+        .btn-primary:active {
+            transform: scale(1);
+        }
+        #modal-tabla .modal-body {
+          overflow-y: auto;
+          max-height: 400px;
+          padding: 20px;
+  /* ajusta el alto máximo según sea necesario */
+        }
+        #tabla {
+           width: 100%;
+           overflow-x: auto;
+        }
